@@ -1,0 +1,11 @@
+name: owned-ci
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/owned-ci.yml'
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "owned-ci ok" && date -u
